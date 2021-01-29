@@ -1,24 +1,35 @@
 <template>
     <div class="navbar">
         <ul>
-            <li><i class="iconfont icon-qm"></i></li>
-            <li><i class="iconfont icon-search"></i></li>
-            <li>
-                <a href="javascript: void(0)">选择车辆</a>
-            </li>
-            <li><i class="iconfont icon-dingwei"></i></li>
-            <li><i class="iconfont icon-user-s"></i></li>
+            <router-link tag="li" to="/about"><i class="iconfont icon-qm"></i></router-link>
+            <router-link tag="li" to="/search"><i class="iconfont icon-search"></i></router-link>
+            <router-link tag="li" to="/checkCar"><a href="javascript: void(0)">选择车辆</a></router-link>
+            <router-link tag="li" to="/location"><i class="iconfont icon-dingwei"></i></router-link>
+            <router-link tag="li" to="/user"><i class="iconfont icon-user-s"></i></router-link>
         </ul>
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            
+        }
+    },
+    methods: {
+        
+    }
+}
+</script>
 <style scoped>
     .navbar{
         position: fixed;
-        left: 0;
-        right: 410px;
-        bottom: 86px;
-        z-index: 99;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);
+        z-index: 88;
         text-align: center;
+        min-width: 526px;
     }
     .navbar li{
         display: inline-block;
@@ -26,17 +37,15 @@
     }
     .navbar a{
         display: block;
-        width: 180px;
-        height: 64px;
-        line-height: 64px;
+        padding: 15px 20px;
+        border-radius: 23px;
+        font-size: 16px;
         margin: 0 17px;
-        text-align: center;
-        border-radius: 84px;
         user-select: none;
-        font-size: 22px;
+        font-size: 20px;
         text-decoration: none;
         color: #fff;
-        background-color: #34393f;
+        background-color: var(--themeColor);
     }
     .iconfont{
         display: inline-block;
@@ -50,5 +59,8 @@
         margin: 0 17px;
         cursor: pointer;
         background-color: #34393f;
+    }
+    .navbar .router-link-active .iconfont{
+        color: var(--themeHoverColor);
     }
 </style>

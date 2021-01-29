@@ -28,3 +28,5 @@ reset.css
 
 ### 引入vue-amap组件
 npm install -S vue-amap (https://elemefe.github.io/vue-amap)
+
+### 引入vue-awesome-swiper组件

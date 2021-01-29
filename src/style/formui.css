@@ -1,0 +1,64 @@
+.form-ui .el-input__inner{
+    background-color: var(--themeUiColor); 
+    border: 1px solid var(--themeUiColor) !important;
+    color: #ffffff;
+}
+.form-ui .el-form-item{
+    position: relative;
+    margin-bottom: 20px;
+}
+.form-ui .el-form-item .validation{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    border: none;
+    width: 100px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: var(--themeColor);
+}
+.form-ui .el-button{
+    width: 100%;
+}
+/* element ui 弹窗样式 */
+.el-dialog{
+    width: 650px !important;
+    margin: 0 auto 0px !important;
+    margin-top: 50vh !important;
+    transform: translateY(-50%);
+    background-color: var(--themeColor) !important;
+}
+.el-dialog__body {
+    padding: 30px 170px !important;
+}
+.el-dialog__header .el-dialog__title {
+    font-size: 16px;
+    color: #ffffff;
+}
+.el-dialog__header .el-dialog__headerbtn{
+    line-height: 24px;
+}
+.el-dialog__header .el-dialog__headerbtn .el-icon{
+    color: var(--themeHoverColor);
+    font-size: 24px;
+}
+/* 重置浏览器input框的placeholder颜色 */
+
+.el-input__inner::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.2) !important;
+}
+.el-input__inner::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(255,255,255,0.2) !important;
+}
+.el-input__inner:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(255,255,255,0.2) !important;
+}
+.el-input__inner:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255,255,255,0.2) !important;
+}
