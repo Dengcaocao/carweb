@@ -10,26 +10,8 @@
         </div>
         <!-- 底部导航 -->
         <NavBar id="navBarC" />
-        <!-- 登录弹窗 -->
-        <el-dialog
-            title="登录"
-            :visible.sync="dialogVisible_login"
-            width="600">
-            <el-form class="form-ui">
-                <el-form-item>
-                    <el-input placeholder="请输入用户名"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-input placeholder="密码"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-input placeholder="验证码"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
-                </el-form-item>
-            </el-form>
-        </el-dialog>
+        <!-- 登录渲染 -->
+        <router-view name="login"></router-view>
     </div>
 </template>
 <script>
@@ -37,14 +19,6 @@ import Amap from "@/components/amap/amap.vue";
 import Cars from "@/views/cars/index.vue";
 import NavBar from "@/components/navBar/index.vue";
 export default {
-    data(){
-        return {
-            dialogVisible_login: true
-        }
-    },
-    created(){
-        
-    },
     mounted() {
         let mapbox = document.getElementById('mapbox')
         mapbox.addEventListener('click',() => {
@@ -70,15 +44,15 @@ export default {
     computed: {
         // 用于显示或隐藏会员列表
         isActive(){
-            return this.$route.path !== '/'
+            return this.$route.path !== '/' && this.$route.path !== '/login'
         }
-    },
-    methods: {
-        
-    },
+    }
 }
 </script>
 <style scoped>
+    .home{
+        position: relative;
+    }
     .children-view{
         position: fixed;
         top: 0;
@@ -98,5 +72,13 @@ export default {
     }
     .active{
         right: 0;
+    }
+    .login-warp{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.4);
     }
 </style>

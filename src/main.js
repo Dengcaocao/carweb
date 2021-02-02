@@ -12,6 +12,12 @@ import '@/plugin/amap.js'
 // 引入全局组件
 import '@/allComponents.js'
 
+// 引入axios
+import '@/utils/request.js'
+
+// 引入路由权限
+import '@/permission.js'
+
 // 引入ui组件
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
