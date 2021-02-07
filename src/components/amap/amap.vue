@@ -145,7 +145,7 @@ export default {
       this.parkingInfo[0].distance = distance
       this.parkingInfo[0].time = time
       this.parkingInfo[0].content = `<div style="color:#fff;background:#34393f;width:280px;height:52px;line-height:52px;text-align:center;font-size:14px;padding:0 20px;border-radius:40px;">${this.parkingInfo[0].carsNumber}辆车 | 距离您${distance}米，预计${time}分钟到达</div>`
-    }
+    } 
   }
 }
 </script>
