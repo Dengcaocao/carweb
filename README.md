@@ -30,3 +30,9 @@ reset.css
 npm install -S vue-amap (https://elemefe.github.io/vue-amap)
 
 ### 引入vue-awesome-swiper组件
+
+### 本地缓存
+js-cookie
+
+### 密码处理
+js-sha1

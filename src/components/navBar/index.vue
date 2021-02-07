@@ -4,7 +4,7 @@
             <router-link tag="li" to="/about"><i class="iconfont icon-qm"></i></router-link>
             <router-link tag="li" to="/search"><i class="iconfont icon-search"></i></router-link>
             <router-link tag="li" to="/checkCar"><a href="javascript: void(0)">选择车辆</a></router-link>
-            <router-link tag="li" to="/location"><i class="iconfont icon-dingwei"></i></router-link>
+            <li @click="selfLocation"><i class="iconfont icon-dingwei"></i><li></li>
             <router-link tag="li" to="/user"><i class="iconfont icon-user-s"></i></router-link>
         </ul>
     </div>
@@ -17,7 +17,9 @@ export default {
         }
     },
     methods: {
-        
+        selfLocation() {
+            this.$store.commit('selfLocation')
+        }
     }
 }
 </script>
